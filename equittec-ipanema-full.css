@@ -92,9 +92,11 @@ header.js-header::before {
 
 @media (min-width: 768px) {
   .js-head-main .head-row {
-    display: grid !important;
-    grid-template-columns: 220px 1fr auto !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
     align-items: center !important;
+    justify-content: space-between !important;
     gap: 32px !important;
     max-width: 1300px !important;
     margin: 0 auto !important;
@@ -103,19 +105,33 @@ header.js-header::before {
   .js-head-main .menu-container, .js-head-main .js-search-trigger {
     display: none !important;
   }
+  .js-head-main .logo-container {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    grid-column: unset !important;
+    grid-row: unset !important;
+    display: flex !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
   .js-head-main .utilities-group {
+    flex: 1 1 auto !important;
+    width: auto !important;
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
-    width: 100% !important;
     gap: 28px !important;
-    grid-column: 2 / 4 !important;
+    grid-column: unset !important;
+    grid-row: unset !important;
   }
   .js-head-main .js-search-container {
     flex: 1 1 auto !important;
     max-width: 580px !important;
     margin: 0 auto !important;
     position: relative !important;
+    grid-column: unset !important;
+    grid-row: unset !important;
   }
   .js-head-main .js-search-expand-form {
     display: block !important;
@@ -128,10 +144,15 @@ header.js-header::before {
     box-shadow: none !important;
     width: 100% !important;
   }
+  .js-head-main .search-form,
+  .js-head-main .search-form-field {
+    margin: 0 !important;
+  }
 }
 
-.js-head-main .logo-container {
-  justify-self: start !important;
+.js-head-main #logo.logo-img-container {
+  display: flex !important;
+  align-items: center !important;
   margin: 0 !important;
 }
 
@@ -140,7 +161,9 @@ header.js-header::before {
   align-items: center !important;
   justify-content: center !important;
   width: 185px !important;
-  height: 58px !important;
+  height: 52px !important;
+  margin: 0 !important;
+  transform: translateY(-3px) !important;
   background-image: url("https://dcdn-us.mitiendanube.com/stores/007/482/900/themes/brasilia/2-img-7571000267390175514-1776355055-0f7912bcfdd83f6f8c57f32ff106f0d11776355055-640-0.webp") !important;
   background-size: contain !important;
   background-repeat: no-repeat !important;
@@ -151,7 +174,7 @@ header.js-header::before {
 .js-head-main #logo.logo-img-container img.logo-img {
   opacity: 0 !important;
   width: 185px !important;
-  height: 58px !important;
+  height: 52px !important;
 }
 
 .js-head-main .search-form-field {
