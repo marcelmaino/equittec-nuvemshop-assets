@@ -414,6 +414,51 @@ header.js-header::before {
 #ns-section-featured_categories_images #ns-block-cat_5 .category-item-text::after { content: "Bovinos"; }
 #ns-section-featured_categories_images #ns-block-cat_6 .category-item-text::after { content: "Seringas"; }
 
+/* 3.1 ORDEM DAS SEÇÕES DA HOME (FIEL AO MODELO layout.png) */
+main#MainContent {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+#ns-section-slideshow { order: 1 !important; }
+#ns-section-featured_categories_images { order: 2 !important; }
+#ns-section-featured_products { order: 3 !important; }
+#ns-section-banners_two_columns { order: 4 !important; }
+#ns-section-featured_products_2 { order: 5 !important; }
+#ns-section-icon_text { order: 6 !important; }
+
+/* 3.2 VITRINES "PRODUTOS EM DESTAQUE" E "OS MAIS VENDIDOS"
+   Quando a coleção está vazia na Nuvemshop (not(:has(.js-item-product))),
+   exibe automaticamente a vitrine fiel do modelo (5 cards por linha).
+   Assim que houver produtos vinculados no admin, renderiza os cards reais! */
+#ns-section-featured_products:not(:has(.js-item-product)),
+#ns-section-featured_products_2:not(:has(.js-item-product)) {
+  display: block !important;
+  width: 100% !important;
+  max-width: 1300px !important;
+  height: 620px !important;
+  margin: 36px auto !important;
+  background-repeat: no-repeat !important;
+  background-position: top center !important;
+  background-size: contain !important;
+}
+
+#ns-section-featured_products:not(:has(.js-item-product)) {
+  background-image: url("https://raw.githubusercontent.com/marcelmaino/equittec-nuvemshop-assets/main/assets-nuvemshop/secao-produtos-destaque.png") !important;
+}
+
+#ns-section-featured_products_2:not(:has(.js-item-product)) {
+  background-image: url("https://raw.githubusercontent.com/marcelmaino/equittec-nuvemshop-assets/main/assets-nuvemshop/secao-os-mais-vendidos.png") !important;
+}
+
+@media (max-width: 1024px) {
+  #ns-section-featured_products:not(:has(.js-item-product)),
+  #ns-section-featured_products_2:not(:has(.js-item-product)) {
+    height: 44vw !important;
+    min-height: 240px !important;
+  }
+}
+
 /* 4. CARDS DE PRODUTOS */
 .js-item-product.product-item {
   background: #FFFFFF !important;
