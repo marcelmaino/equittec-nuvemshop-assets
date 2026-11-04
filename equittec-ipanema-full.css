@@ -137,12 +137,21 @@ header.js-header::before {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
+    pointer-events: auto !important;
     position: static !important;
     transform: none !important;
     background: transparent !important;
     padding: 0 !important;
     box-shadow: none !important;
     width: 100% !important;
+  }
+  .js-head-main .js-search-expand-form *,
+  .js-head-main .search-form-wrap,
+  .js-head-main .search-form,
+  .js-head-main .search-form-field,
+  .js-head-main .search-input,
+  .js-head-main .search-submit-btn {
+    pointer-events: auto !important;
   }
   .js-head-main .search-form,
   .js-head-main .search-form-field {
@@ -303,8 +312,18 @@ header.js-header::before {
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
+  height: 460px !important;
   min-height: 460px !important;
+  max-height: 460px !important;
+  overflow: hidden !important;
   border-bottom: 1px solid #EBEBEB !important;
+}
+
+#ns-section-slideshow .js-slideshow,
+#ns-section-slideshow .swiper-wrapper,
+#ns-section-slideshow .swiper-slide {
+  height: 460px !important;
+  max-height: 460px !important;
 }
 
 #ns-section-slideshow .swiper-slide img[data-srcset*="placeholders"],
@@ -483,6 +502,16 @@ main#MainContent {
   border-radius: 8px !important;
   margin-bottom: 12px !important;
   overflow: hidden !important;
+}
+
+.js-item-product .js-product-item-image-link-private {
+  display: block !important;
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 5 !important;
+  cursor: pointer !important;
 }
 
 .js-item-product .product-item-image {
