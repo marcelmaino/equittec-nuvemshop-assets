@@ -1,0 +1,748 @@
+/* ==========================================================================
+   EQUITTEC - EQUIPAMENTOS AGROPECUÁRIOS E INDUSTRIAIS
+   Personalização Completa para Tema Ipanema (Nuvemshop)
+   Baseado fielmente no arquivo original layout.psd
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800;1,900&display=swap');
+
+:root {
+  --heading-font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  --body-font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  --eq-orange-bar: #EF8C00;
+  --eq-navy-darkest: #021F2F;
+  --eq-navy-mid: #012A40;
+  --eq-navy-light: #003957;
+  --eq-navy-divider: #022436;
+  --eq-heading-dark: #2B2B2B;
+  --eq-subtitle-gray: #6A6A6A;
+  --eq-circle-bg: #F2F2F2;
+  --eq-card-border: #E3E3E3;
+  --eq-btn-dark: #18181A;
+  --eq-footer-top: #141416;
+  --eq-footer-main: #18181A;
+  --eq-red-accent: #E83C3E;
+  --eq-gold-star: #FFB800;
+
+  --main-background: #FFFFFF !important;
+  --main-foreground: #2B2B2B !important;
+  --accent-color: #EF8C00 !important;
+  --button-primary-background: #18181A !important;
+  --button-primary-background-color: #18181A !important;
+  --button-primary-color: #FFFFFF !important;
+  --button-primary-foreground-color: #FFFFFF !important;
+  --button-primary-border-radius: 8px !important;
+  --page-width: 1300px !important;
+  --border-radius: 12px !important;
+}
+
+body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, p, a, span, button, input, select, textarea, .heading-block, .nav-list-link, .product-item-name {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* 1. HEADER / TOPO */
+header.js-header::before {
+  content: "🚚  Frete grátis para todo Brasil em compras acima de R$399";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 27px;
+  background-color: var(--eq-orange-bar);
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+  position: relative;
+  z-index: 10;
+}
+
+.js-head-main.head-main {
+  --header-background: #012A40 !important;
+  --header-foreground: #FFFFFF !important;
+  --header-desktop-nav-background: transparent !important;
+  --header-desktop-nav-foreground: #FFFFFF !important;
+  --header-utilities-foreground: #FFFFFF !important;
+  --header-badge-background: var(--eq-red-accent) !important;
+  --header-badge-foreground: #FFFFFF !important;
+  background: linear-gradient(180deg, #021F2F 0%, #012A40 50%, #003957 100%) !important;
+  color: #FFFFFF !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border-bottom: none !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+.js-head-main.head-main::before {
+  content: "💬 WhatsApp     📞 (54) 99170-4349     ✉️ administrativo@equittec.com.br";
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 5px 24px;
+  height: 30px;
+  font-size: 11.5px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (min-width: 768px) {
+  .js-head-main .head-row {
+    display: grid !important;
+    grid-template-columns: 220px 1fr auto !important;
+    align-items: center !important;
+    gap: 32px !important;
+    max-width: 1300px !important;
+    margin: 0 auto !important;
+    padding: 14px 24px !important;
+  }
+  .js-head-main .menu-container, .js-head-main .js-search-trigger {
+    display: none !important;
+  }
+  .js-head-main .utilities-group {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    gap: 28px !important;
+    grid-column: 2 / 4 !important;
+  }
+  .js-head-main .js-search-container {
+    flex: 1 1 auto !important;
+    max-width: 580px !important;
+    margin: 0 auto !important;
+    position: relative !important;
+  }
+  .js-head-main .js-search-expand-form {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: static !important;
+    transform: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    width: 100% !important;
+  }
+}
+
+.js-head-main .logo-container {
+  justify-self: start !important;
+  margin: 0 !important;
+}
+
+.js-head-main #logo.logo-img-container a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 185px !important;
+  height: 58px !important;
+  background-image: url("https://dcdn-us.mitiendanube.com/stores/007/482/900/themes/brasilia/2-img-7571000267390175514-1776355055-0f7912bcfdd83f6f8c57f32ff106f0d11776355055-640-0.webp") !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center left !important;
+  mix-blend-mode: lighten !important;
+}
+
+.js-head-main #logo.logo-img-container img.logo-img {
+  opacity: 0 !important;
+  width: 185px !important;
+  height: 58px !important;
+}
+
+.js-head-main .search-form-field {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  background: #FFFFFF !important;
+  border-radius: 999px !important;
+  height: 42px !important;
+  padding: 0 18px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16) !important;
+  border: none !important;
+}
+
+.js-head-main .search-input {
+  background: transparent !important;
+  border: none !important;
+  color: #2B2B2B !important;
+  font-size: 13.5px !important;
+  font-weight: 400 !important;
+  width: 100% !important;
+  height: 100% !important;
+  padding: 0 34px 0 4px !important;
+  box-shadow: none !important;
+}
+
+.js-head-main .search-input::placeholder {
+  color: #888888 !important;
+}
+
+.js-head-main .search-submit-btn {
+  color: #18181A !important;
+  fill: #18181A !important;
+  background: transparent !important;
+  border: none !important;
+  position: absolute !important;
+  right: 14px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
+.js-head-main .header-account > a.header-icon {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  color: #FFFFFF !important;
+  text-decoration: none !important;
+  font-size: 12.5px !important;
+  font-weight: 500 !important;
+  white-space: nowrap !important;
+}
+
+.js-head-main .header-account > a.header-icon::after {
+  content: "Cadastre-se | Fazer login";
+  color: #FFFFFF;
+  font-size: 12.5px;
+  font-weight: 500;
+}
+
+.js-head-main .utility-icon {
+  fill: #FFFFFF !important;
+  color: #FFFFFF !important;
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.js-head-main .header-cart .badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: var(--eq-red-accent) !important;
+  color: #FFFFFF !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  min-width: 18px !important;
+  height: 18px !important;
+  border-radius: 50% !important;
+}
+
+.js-head-main .nav-desktop-container {
+  background: rgba(0, 30, 46, 0.25) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.js-head-main .js-nav-desktop-container {
+  visibility: visible !important;
+  height: auto !important;
+  max-width: 1300px !important;
+  margin: 0 auto !important;
+  padding: 0 24px !important;
+}
+
+.js-head-main .nav-desktop-list {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 32px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.js-head-main .nav-desktop-list .nav-list-link {
+  color: #FFFFFF !important;
+  font-size: 12.5px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  padding: 12px 6px !important;
+  transition: color 0.2s ease !important;
+}
+
+.js-head-main .nav-desktop-list .nav-list-link:hover {
+  color: var(--eq-orange-bar) !important;
+}
+
+.js-head-main .desktop-dropdown {
+  background: #012A40 !important;
+  color: #FFFFFF !important;
+  border-top: 2px solid var(--eq-orange-bar) !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* 2. HERO BANNER PRINCIPAL (Black Friday Equittec) */
+#ns-section-slideshow .js-slideshow-container {
+  background-image: url("https://raw.githubusercontent.com/marcelmaino/equittec-nuvemshop-assets/main/assets-nuvemshop/banner-principal-black-friday.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  min-height: 460px !important;
+  border-bottom: 1px solid #EBEBEB !important;
+}
+
+#ns-section-slideshow .swiper-slide img[data-srcset*="placeholders"],
+#ns-section-slideshow .swiper-slide img[srcset*="placeholders"],
+#ns-section-slideshow .placeholder,
+#ns-section-slideshow .media-content,
+#ns-section-slideshow .swiper-pagination,
+#ns-section-slideshow .swiper-button-prev,
+#ns-section-slideshow .swiper-button-next,
+#ns-section-slideshow .slider-fraction {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* 3. ÍCONES CIRCULARES DE CATEGORIAS */
+#ns-section-featured_categories_images {
+  padding: 36px 0 16px !important;
+  background: #FFFFFF !important;
+}
+
+#ns-section-featured_categories_images #ns-block-heading,
+#ns-section-featured_categories_pills,
+#ns-section-banners_one_column,
+#ns-section-newsletter,
+#ns-section-faq {
+  display: none !important;
+}
+
+#ns-section-featured_categories_images .featured-categories-section {
+  max-width: 1300px !important;
+  margin: 0 auto !important;
+  --category-image-size: 120px !important;
+}
+
+#ns-section-featured_categories_images .swiper-wrapper {
+  justify-content: center !important;
+  gap: 18px !important;
+}
+
+#ns-section-featured_categories_images .category-item-link {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  gap: 12px !important;
+  text-decoration: none !important;
+  width: 132px !important;
+}
+
+#ns-section-featured_categories_images .category-item-image {
+  width: 120px !important;
+  height: 120px !important;
+  border-radius: 50% !important;
+  background-color: var(--eq-circle-bg) !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  overflow: hidden !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+#ns-section-featured_categories_images .category-item-link:hover .category-item-image {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(2, 36, 54, 0.12);
+}
+
+#ns-section-featured_categories_images #ns-block-cat_1 .category-item-image {
+  background-image: url("https://raw.githubusercontent.com/marcelmaino/equittec-nuvemshop-assets/main/assets-nuvemshop/categoria-1-bebedouros.png") !important;
+}
+#ns-section-featured_categories_images #ns-block-cat_2 .category-item-image {
+  background-image: url("https://raw.githubusercontent.com/marcelmaino/equittec-nuvemshop-assets/main/assets-nuvemshop/categoria-2-identificacao-animal.png") !important;
+}
+#ns-section-featured_categories_images #ns-block-cat_3 .category-item-image {
+  background-image: url("https://raw.githubusercontent.com/marcelmaino/equittec-nuvemshop-assets/main/assets-nuvemshop/categoria-3-manejo.png") !important;
+}
+#ns-section-featured_categories_images #ns-block-cat_4 .category-item-image {
+  background-image: url("https://raw.githubusercontent.com/marcelmaino/equittec-nuvemshop-assets/main/assets-nuvemshop/categoria-4-distribuicao-imv.png") !important;
+}
+#ns-section-featured_categories_images #ns-block-cat_5 .category-item-image {
+  background-image: url("https://raw.githubusercontent.com/marcelmaino/equittec-nuvemshop-assets/main/assets-nuvemshop/categoria-5-bovinos.png") !important;
+}
+#ns-section-featured_categories_images #ns-block-cat_6 .category-item-image {
+  background-image: url("https://raw.githubusercontent.com/marcelmaino/equittec-nuvemshop-assets/main/assets-nuvemshop/categoria-8-seringas.png") !important;
+}
+
+#ns-section-featured_categories_images .category-item-image img[data-srcset*="placeholders"],
+#ns-section-featured_categories_images .category-item-image img[srcset*="placeholders"] {
+  opacity: 0 !important;
+}
+
+#ns-section-featured_categories_images .category-item-text {
+  font-size: 0 !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+#ns-section-featured_categories_images .category-item-text::after {
+  font-size: 13px;
+  color: #000000;
+  font-weight: 500;
+}
+
+#ns-section-featured_categories_images #ns-block-cat_1 .category-item-text::after { content: "Bebedouros"; }
+#ns-section-featured_categories_images #ns-block-cat_2 .category-item-text::after { content: "Identificação Animal"; }
+#ns-section-featured_categories_images #ns-block-cat_3 .category-item-text::after { content: "Manejo"; }
+#ns-section-featured_categories_images #ns-block-cat_4 .category-item-text::after { content: "Distribuição IMV"; }
+#ns-section-featured_categories_images #ns-block-cat_5 .category-item-text::after { content: "Bovinos"; }
+#ns-section-featured_categories_images #ns-block-cat_6 .category-item-text::after { content: "Seringas"; }
+
+/* 4. CARDS DE PRODUTOS */
+.js-item-product.product-item {
+  background: #FFFFFF !important;
+  border: 1px solid var(--eq-card-border) !important;
+  border-radius: 12px !important;
+  padding: 14px 14px 16px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease !important;
+  overflow: hidden !important;
+}
+
+.js-item-product.product-item:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.07) !important;
+  border-color: #CCCCCC !important;
+}
+
+.js-item-product .product-item-image-container {
+  background: #FFFFFF !important;
+  border-radius: 8px !important;
+  margin-bottom: 12px !important;
+  overflow: hidden !important;
+}
+
+.js-item-product .product-item-image {
+  object-fit: contain !important;
+  padding: 8px !important;
+}
+
+.js-item-product .product-item-information {
+  text-align: center !important;
+  padding-top: 10px !important;
+  border-top: 1px solid var(--eq-card-border) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.js-item-product .product-item-link {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  width: 100% !important;
+  text-decoration: none !important;
+  gap: 6px !important;
+}
+
+.js-item-product .product-item-name {
+  color: var(--eq-heading-dark) !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  line-height: 1.35 !important;
+  text-align: center !important;
+  min-height: 38px !important;
+}
+
+.js-item-product .price-container,
+.js-item-product .js-price-display {
+  color: #18181A !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  text-align: center !important;
+}
+
+.js-item-product .product-item-link::after {
+  content: "🛒  COMPRAR";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 38px;
+  margin-top: 8px;
+  background-color: var(--eq-btn-dark);
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.js-item-product:hover .product-item-link::after {
+  background-color: var(--eq-orange-bar);
+}
+
+/* 5. FILTRE POR ATIVIDADE (SUÍNOS & BOVINOS - Imagens Oficiais do Modelo Local) */
+#ns-section-banners_two_columns {
+  max-width: 1300px !important;
+  margin: 48px auto !important;
+  padding: 0 24px !important;
+}
+
+#ns-section-banners_two_columns .banners-section {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+#ns-section-banners_two_columns .banners-section::before {
+  content: "Filtre por Atividade";
+  display: block;
+  text-align: center;
+  color: var(--eq-heading-dark);
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+#ns-section-banners_two_columns .banners-section::after {
+  content: "Produtos recomendados para áreas específicas";
+  display: block;
+  text-align: center;
+  color: var(--eq-subtitle-gray);
+  font-size: 13.5px;
+  font-weight: 400;
+  padding-bottom: 16px;
+  margin: 4px auto 32px;
+  background: linear-gradient(var(--eq-navy-divider), var(--eq-navy-divider)) bottom center / 34px 4px no-repeat;
+}
+
+#ns-section-banners_two_columns .banners-section .flex-grid {
+  order: 3 !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 28px !important;
+  width: 100% !important;
+}
+
+#ns-section-banners_two_columns .banner-item:nth-child(n+3),
+#ns-section-banners_two_columns .media-content {
+  display: none !important;
+}
+
+#ns-section-banners_two_columns .banner-block {
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  position: relative !important;
+  height: 365px !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+#ns-section-banners_two_columns #ns-block-banner_1 .banner-image-container {
+  background: url("https://raw.githubusercontent.com/marcelmaino/equittec-nuvemshop-assets/main/assets-nuvemshop/banner-atividade-suinos.png") center / cover no-repeat !important;
+  height: 100% !important;
+}
+
+#ns-section-banners_two_columns #ns-block-banner_2 .banner-image-container {
+  background: url("https://raw.githubusercontent.com/marcelmaino/equittec-nuvemshop-assets/main/assets-nuvemshop/banner-atividade-bovinos.png") center / cover no-repeat !important;
+  height: 100% !important;
+}
+
+#ns-section-banners_two_columns .banner-image-container img[data-src*="placeholders"],
+#ns-section-banners_two_columns .banner-image-container .placeholder {
+  opacity: 0 !important;
+}
+
+/* 6. SEÇÃO DE DEPOIMENTOS */
+#ns-section-icon_text {
+  background-color: #FFFFFF !important;
+  padding: 56px 0 64px !important;
+  border-top: 1px solid #F0F0F0 !important;
+}
+
+#ns-section-icon_text #ns-block-heading {
+  font-size: 0 !important;
+  text-align: center !important;
+  margin-bottom: 36px !important;
+}
+
+#ns-section-icon_text #ns-block-heading::before {
+  content: "Depoimentos";
+  display: block;
+  color: var(--eq-heading-dark);
+  font-size: 26px;
+  font-weight: 800;
+}
+
+#ns-section-icon_text #ns-block-heading::after {
+  content: "O que dizem sobre nós";
+  display: block;
+  color: var(--eq-subtitle-gray);
+  font-size: 13.5px;
+  padding-bottom: 16px;
+  margin-top: 4px;
+  background: linear-gradient(var(--eq-navy-divider), var(--eq-navy-divider)) bottom center / 34px 4px no-repeat;
+}
+
+#ns-section-icon_text .swiper-wrapper {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 24px !important;
+  width: 100% !important;
+  transform: none !important;
+}
+
+#ns-section-icon_text .swiper-slide {
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+#ns-section-icon_text .icon-text-item {
+  background: #FFFFFF !important;
+  border-radius: 14px !important;
+  padding: 28px 24px !important;
+  text-align: center !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06) !important;
+  border: 1px solid #EBEBEB !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#ns-section-icon_text .icon-text-item-icon {
+  display: none !important;
+}
+
+#ns-section-icon_text .icon-text-item::before {
+  content: "★★★★★";
+  color: var(--eq-gold-star);
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+
+#ns-section-icon_text .icon-text-item-content {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 12px !important;
+  text-align: center !important;
+}
+
+#ns-section-icon_text .icon-text-item-title {
+  font-size: 0 !important;
+  order: 2;
+  margin: 0 !important;
+}
+
+#ns-section-icon_text .icon-text-item-title::after {
+  font-size: 14px;
+  font-weight: 800;
+  color: #2B2B2B;
+}
+
+#ns-section-icon_text .icon-text-item-description {
+  font-size: 0 !important;
+  order: 1;
+}
+
+#ns-section-icon_text .icon-text-item-description::after {
+  font-size: 13px;
+  line-height: 1.55;
+  color: #4A4A4A;
+}
+
+#ns-section-icon_text #ns-block-item_1 .icon-text-item-title::after { content: "Carlos W."; }
+#ns-section-icon_text #ns-block-item_1 .icon-text-item-description::after { content: "“Comprei os equipamentos de contenção para bovinos há mais de um ano e até hoje não tive nenhum problema. A qualidade é excelente e o preço muito justo. Recomendo sem hesitar.”"; }
+
+#ns-section-icon_text #ns-block-item_2 .icon-text-item-title::after { content: "Bruno T."; }
+#ns-section-icon_text #ns-block-item_2 .icon-text-item-description::after { content: "“Precisava de equipamentos para o manejo dos suínos e fui muito bem atendido por telefone. Tudo funcionando perfeitamente. Voltarei a comprar com certeza.”"; }
+
+#ns-section-icon_text #ns-block-item_3 .icon-text-item-title::after { content: "Camila M."; }
+#ns-section-icon_text #ns-block-item_3 .icon-text-item-description::after { content: "“É bom quando a empresa conhece o que vende. Quando entrei em contato, o atendente já sabia exatamente o que eu precisava para o meu sistema de manejo. Isso é o que importa.”"; }
+
+/* 7. FOOTER / RODAPÉ ESCURO */
+footer#ns-section-footer,
+footer#ns-section-footer [data-store="footer"] {
+  background-color: var(--eq-footer-main) !important;
+  color: #FFFFFF !important;
+  padding-top: 0 !important;
+}
+
+footer#ns-section-footer [data-store="footer"]::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 92px;
+  background: var(--eq-footer-top) url("https://dcdn-us.mitiendanube.com/stores/007/482/900/themes/brasilia/2-img-7571000267390175514-1776355055-0f7912bcfdd83f6f8c57f32ff106f0d11776355055-640-0.webp") calc(50% - 480px) center / 175px auto no-repeat;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+footer#ns-section-footer .footer-content.container {
+  max-width: 1300px !important;
+  padding: 44px 16px 32px !important;
+}
+
+footer#ns-section-footer .accordion-container,
+footer#ns-section-footer .footer-menu-accordion,
+footer#ns-section-footer .footer-menu-toggle-title,
+footer#ns-section-footer .footer-menu-accordion-content {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: #FFFFFF !important;
+}
+
+footer#ns-section-footer .footer-menu-title,
+footer#ns-section-footer .footer-newsletter-title,
+footer#ns-section-footer .footer-payment-shipping-label {
+  color: #FFFFFF !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  margin-bottom: 14px !important;
+}
+
+footer#ns-section-footer .footer-menu-list li,
+footer#ns-section-footer .footer-menu-list a,
+footer#ns-section-footer .footer-institutional-description,
+footer#ns-section-footer .footer-newsletter-description {
+  color: #CCCCCC !important;
+  font-size: 13px !important;
+  line-height: 1.8 !important;
+  text-decoration: none !important;
+}
+
+footer#ns-section-footer .footer-menu-list a:hover,
+footer#ns-section-footer #ns-block-institutional .footer-menu-list li::before {
+  color: var(--eq-red-accent) !important;
+}
+
+footer#ns-section-footer #ns-block-institutional .footer-menu-list li::before {
+  content: "● ";
+  font-size: 10px;
+  margin-right: 6px;
+}
+
+footer#ns-section-footer .newsletter-form-input {
+  background: #262629 !important;
+  border: 1px solid #38383C !important;
+  color: #FFFFFF !important;
+  border-radius: 6px !important;
+  padding: 10px 14px !important;
+  font-size: 13px !important;
+}
+
+footer#ns-section-footer .newsletter-form-button {
+  background: var(--eq-red-accent) !important;
+  border-color: var(--eq-red-accent) !important;
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+  font-size: 13px !important;
+  border-radius: 6px !important;
+  padding: 10px 22px !important;
+  text-transform: uppercase !important;
+}
+
+footer#ns-section-footer .footer-secondary-info {
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  margin-top: 36px !important;
+  padding-top: 28px !important;
+}
