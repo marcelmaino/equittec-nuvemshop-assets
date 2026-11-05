@@ -53,8 +53,9 @@ color:#FFF!important;padding:0!important;border:0!important;box-shadow:0 4px 14p
 .nav-desktop-list .nav-list-link{color:#FFF!important;font-size:12.5px!important;font-weight:800!important;text-transform:uppercase!important;letter-spacing:.04em!important;padding:12px 6px!important;}
 .nav-desktop-list .nav-list-link:hover{color:#EF8C00!important;}
 .desktop-dropdown{background:#012A40!important;color:#FFF!important;border-top:2px solid #EF8C00!important;}
-.js-slideshow-container{background:url("//dcdn-us.mitiendanube.com/stores/007/482/900/themes/brasilia/2-slide-1776354198549-5225041414-a0d28cc0f970d5294784ab28fba426e81776354199-1920-1920.webp") center/cover no-repeat!important;height:440px!important;min-height:440px!important;max-height:440px!important;overflow:hidden!important;border-bottom:1px solid #EBEBEB!important;}
-.js-slideshow,.section-slideshow .swiper-wrapper,.section-slideshow .swiper-slide{height:440px!important;max-height:440px!important;}
+.js-slideshow-container{background:transparent!important;background-image:none!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:hidden!important;border-bottom:1px solid #EBEBEB!important;}
+.js-slideshow,.section-slideshow .swiper-wrapper,.section-slideshow .swiper-slide,.section-slideshow .media-visual,.section-slideshow picture{width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;display:block!important;}
+.section-slideshow .swiper-slide img{width:100%!important;height:auto!important;max-height:none!important;object-fit:contain!important;position:relative!important;display:block!important;}
 .section-slideshow .placeholder,.section-slideshow .media-content,.section-slideshow .swiper-pagination,.section-slideshow .swiper-button-prev,.section-slideshow .swiper-button-next,.section-slideshow .slider-fraction{opacity:0!important;pointer-events:none!important;}
 #ns-section-featured_categories_images{padding:36px 0 16px!important;background:#FFF!important;}
 #ns-section-featured_categories_images #ns-block-heading,#ns-section-featured_categories_pills,#ns-section-banners_one_column,#ns-section-newsletter,#ns-section-faq{display:none!important;}

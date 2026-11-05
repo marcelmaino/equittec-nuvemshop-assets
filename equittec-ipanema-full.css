@@ -306,24 +306,36 @@ header.js-header::before {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25) !important;
 }
 
-/* 2. HERO BANNER PRINCIPAL (Black Friday Equittec) */
+/* 2. HERO BANNER PRINCIPAL (100% Visível e Proporcional Sem Cortes) */
 #ns-section-slideshow .js-slideshow-container {
-  background-image: url("https://raw.githubusercontent.com/marcelmaino/equittec-nuvemshop-assets/main/assets-nuvemshop/banner-principal-black-friday.png") !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  height: 460px !important;
-  min-height: 460px !important;
-  max-height: 460px !important;
+  background: transparent !important;
+  background-image: none !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
   overflow: hidden !important;
   border-bottom: 1px solid #EBEBEB !important;
 }
 
 #ns-section-slideshow .js-slideshow,
 #ns-section-slideshow .swiper-wrapper,
-#ns-section-slideshow .swiper-slide {
-  height: 460px !important;
-  max-height: 460px !important;
+#ns-section-slideshow .swiper-slide,
+#ns-section-slideshow .media-visual,
+#ns-section-slideshow picture {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  display: block !important;
+}
+
+#ns-section-slideshow .swiper-slide img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  position: relative !important;
+  display: block !important;
 }
 
 #ns-section-slideshow .swiper-slide img[data-srcset*="placeholders"],
