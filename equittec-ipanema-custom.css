@@ -58,8 +58,11 @@ color:#FFF!important;padding:0!important;border:0!important;box-shadow:0 4px 14p
 .section-slideshow .placeholder,.section-slideshow .media-content,.section-slideshow .swiper-pagination,.section-slideshow .swiper-button-prev,.section-slideshow .swiper-button-next,.section-slideshow .slider-fraction{opacity:0!important;pointer-events:none!important;}
 #ns-section-featured_categories_images{padding:36px 0 16px!important;background:#FFF!important;}
 #ns-section-featured_categories_images #ns-block-heading,#ns-section-featured_categories_pills,#ns-section-banners_one_column,#ns-section-newsletter,#ns-section-faq{display:none!important;}
-.featured-categories-section{max-width:1300px!important;margin:0 auto!important;--category-image-size:120px!important;}
-.featured-categories-section .swiper-wrapper{justify-content:center!important;gap:18px!important;}
+.featured-categories-section{max-width:1300px!important;margin:0 auto!important;--category-image-size:120px!important;--carousel-section-edge:0px!important;--section-horizontal-padding:0px!important;}
+.featured-categories-section .swiper{padding-left:0!important;padding-right:0!important;margin:0 auto!important;}
+.featured-categories-section .swiper-wrapper{display:flex!important;justify-content:center!important;align-items:flex-start!important;gap:24px!important;transform:none!important;width:100%!important;margin:0 auto!important;padding:0!important;}
+.featured-categories-section .swiper-slide{margin:0!important;width:auto!important;flex:0 0 auto!important;}
+.featured-categories-section .swiper-button-prev,.featured-categories-section .swiper-button-next{display:none!important;}
 .category-item-link{display:flex!important;flex-direction:column!important;align-items:center!important;text-align:center!important;gap:12px!important;text-decoration:none!important;width:132px!important;}
 .category-item-image{width:120px!important;height:120px!important;border-radius:50%!important;background:#F2F2F2!important;overflow:hidden!important;transition:transform .25s ease!important;}
 .category-item-link:hover .category-item-image{transform:translateY(-4px);}

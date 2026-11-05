@@ -356,11 +356,36 @@ header.js-header::before {
   max-width: 1300px !important;
   margin: 0 auto !important;
   --category-image-size: 120px !important;
+  --carousel-section-edge: 0px !important;
+  --section-horizontal-padding: 0px !important;
+}
+
+#ns-section-featured_categories_images .swiper {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin: 0 auto !important;
 }
 
 #ns-section-featured_categories_images .swiper-wrapper {
+  display: flex !important;
   justify-content: center !important;
-  gap: 18px !important;
+  align-items: flex-start !important;
+  gap: 24px !important;
+  transform: none !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+#ns-section-featured_categories_images .swiper-slide {
+  margin: 0 !important;
+  width: auto !important;
+  flex: 0 0 auto !important;
+}
+
+#ns-section-featured_categories_images .swiper-button-prev,
+#ns-section-featured_categories_images .swiper-button-next {
+  display: none !important;
 }
 
 #ns-section-featured_categories_images .category-item-link {
