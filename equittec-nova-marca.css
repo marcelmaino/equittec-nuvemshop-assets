@@ -931,28 +931,30 @@ header.js-header::before {
   opacity: 0.85;
 }
 
-/* Logo: arquivo novo do manual + proporção travada (≈5.13:1) */
+/* Logo: arquivo do manual (proporção 4.4:1) — altura fixa, largura automática */
 .js-head-main #logo.logo-img-container a {
   position: relative !important;
   display: block !important;
-  width: 250px !important;
-  height: 0 !important;
+  height: 48px !important;
+  width: calc(48px * 4.4) !important; /* 211.2px */
   padding: 0 !important;
-  padding-top: calc(250px / 5.125) !important; /* altura pela proporção real */
   background: none !important;
   background-image: none !important;
   overflow: hidden !important;
   transform: none !important;
   mix-blend-mode: normal !important;
+  aspect-ratio: 4.4 / 1 !important;
 }
 .js-head-main #logo.logo-img-container a::after {
   content: "" !important;
   position: absolute !important;
   inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
   background-image: url("https://cdn.jsdelivr.net/gh/marcelmaino/equittec-nuvemshop-assets@main/assets-nuvemshop/logo-equittec-nova.png") !important;
   background-repeat: no-repeat !important;
   background-position: left center !important;
-  background-size: contain !important;
+  background-size: 100% 100% !important; /* box já na proporção correta = sem distorção */
 }
 .js-head-main #logo.logo-img-container img.logo-img {
   display: none !important;
@@ -963,8 +965,8 @@ header.js-header::before {
 
 @media (max-width: 767px) {
   .js-head-main #logo.logo-img-container a {
-    width: 180px !important;
-    padding-top: calc(180px / 5.125) !important;
+    height: 36px !important;
+    width: calc(36px * 4.4) !important;
   }
 }
 
