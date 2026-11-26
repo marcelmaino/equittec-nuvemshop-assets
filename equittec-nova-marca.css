@@ -1135,10 +1135,12 @@ label {
 .js-item-product .js-item-image,
 .js-item-product .js-product-item-image-private,
 .js-item-product .product-item-image-container img,
-.js-item-product .js-product-item-image-container-private img {
+.js-item-product .js-product-item-image-container-private img,
+.js-item-product img.img-absolute,
+.js-item-product img.img-absolute-centered {
   border-radius: 15px !important;
   object-fit: cover !important;
-  object-position: center !important;
+  object-position: center center !important;
   padding: 0 !important;
   margin: 0 !important;
   background: transparent !important;
@@ -1147,7 +1149,13 @@ label {
   max-width: none !important;
   max-height: none !important;
   position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
   inset: 0 !important;
+  transform: none !important; /* Ipanema img-absolute-centered deslocava a foto */
+  -webkit-transform: none !important;
 }
 .js-item-product .product-item-information {
   border-top: 0 !important;
