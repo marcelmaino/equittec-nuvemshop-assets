@@ -933,11 +933,22 @@ header.js-header::before {
   opacity: 0.85;
 }
 
+/* Logo na proporção natural (900×194 ≈ 4.64:1) */
 .js-head-main #logo.logo-img-container a {
   background-image: url("https://cdn.jsdelivr.net/gh/marcelmaino/equittec-nuvemshop-assets@main/assets-nuvemshop/logo-equittec-nova.png") !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: left center !important;
   mix-blend-mode: normal !important;
-  width: 190px !important;
-  height: 48px !important;
+  width: 210px !important;
+  height: 45px !important; /* 210 / 4.64 ≈ 45 */
+  transform: none !important;
+}
+.js-head-main #logo.logo-img-container img.logo-img {
+  opacity: 0 !important;
+  width: 210px !important;
+  height: 45px !important;
+  object-fit: contain !important;
 }
 
 .js-head-main .header-account > a.header-icon,
@@ -975,26 +986,35 @@ header.js-header::before {
   color: #F0F5FA !important;
 }
 
-/* Submenu Produtos: 1 coluna, itens empilhados + contraste */
+/* Submenu Produtos: 1 coluna, largura = maior frase */
+.js-head-main .desktop-dropdown,
+.js-head-main .js-desktop-dropdown {
+  width: max-content !important;
+  max-width: min(92vw, 480px) !important;
+  left: auto !important;
+  right: auto !important;
+}
 .js-head-main .desktop-dropdown-container {
   display: block !important;
   grid-template-columns: none !important;
-  max-width: 360px !important;
-  margin: 0 auto !important;
-  padding: 18px 28px 24px !important;
+  width: max-content !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 14px 12px 16px !important;
 }
 .js-head-main .desktop-list-subitems {
   display: flex !important;
   flex-direction: column !important;
   align-items: stretch !important;
   gap: 2px !important;
-  width: 100% !important;
+  width: max-content !important;
+  min-width: 0 !important;
   columns: 1 !important;
   column-count: 1 !important;
 }
 .js-head-main .desktop-list-subitems > .nav-item {
   display: block !important;
-  width: 100% !important;
+  width: auto !important;
   float: none !important;
 }
 .js-head-main .desktop-dropdown .nav-list-link,
@@ -1008,9 +1028,10 @@ header.js-header::before {
   -webkit-text-fill-color: #FFFFFF !important;
   background: transparent !important;
   display: block !important;
-  width: 100% !important;
+  width: auto !important;
+  white-space: nowrap !important;
   text-align: left !important;
-  padding: 0.75rem 0.9rem !important;
+  padding: 0.7rem 1rem !important;
   border-radius: 12px !important;
   font-size: 15px !important;
   font-weight: 600 !important;
@@ -1078,45 +1099,75 @@ label {
   background: transparent !important;
 }
 
-/* Produtos: sem fundo branco arredondado; foto com radius 15px */
+/* Grid de produtos — ideia do layout limpo + botão Comprar */
 .js-item-product.product-item {
-  background: transparent !important;
-  border: 0 !important;
-  border-radius: 0 !important;
+  background: #FFFFFF !important;
+  border: 1px solid #E6E6E0 !important;
+  border-radius: 16px !important;
   box-shadow: none !important;
-  padding: 0 0 8px !important;
-  overflow: visible !important;
+  padding: 12px 12px 14px !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
 }
 .js-item-product.product-item:hover {
-  transform: none !important;
-  box-shadow: none !important;
-  border-color: transparent !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 28px rgba(10, 40, 30, 0.08) !important;
+  border-color: #D5D5C8 !important;
 }
 .js-item-product .product-item-image-container,
 .js-item-product .js-item-image-container,
-.js-item-product .item-image-container {
-  background: transparent !important;
+.js-item-product .item-image-container,
+.js-item-product .js-product-item-image-container-private {
+  background: #F3F3F0 !important;
   border-radius: 15px !important;
   margin-bottom: 12px !important;
   overflow: hidden !important;
   box-shadow: none !important;
   border: 0 !important;
+  aspect-ratio: 1 / 1 !important;
+  width: 100% !important;
 }
 .js-item-product .product-item-image,
 .js-item-product img.product-item-image,
-.js-item-product .js-item-image {
+.js-item-product .js-item-image,
+.js-item-product .js-product-item-image-private {
   border-radius: 15px !important;
   object-fit: contain !important;
-  padding: 0 !important;
+  padding: 10px !important;
   background: transparent !important;
+  width: 100% !important;
+  height: 100% !important;
 }
 .js-item-product .product-item-information {
   border-top: 0 !important;
+  text-align: left !important;
+  align-items: flex-start !important;
+  padding-top: 0 !important;
+  gap: 6px !important;
+}
+.js-item-product .product-item-link {
+  align-items: flex-start !important;
+  text-align: left !important;
+  gap: 8px !important;
 }
 .js-item-product .product-item-name,
+.js-item-product .js-item-name {
+  color: #0A281E !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  text-align: left !important;
+  min-height: 0 !important;
+}
 .js-item-product .price-container,
 .js-item-product .js-price-display {
   color: #0A281E !important;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  text-align: left !important;
+  width: 100% !important;
 }
 .js-item-product .product-item-link::after {
   background-color: #A89968 !important;
@@ -1126,6 +1177,9 @@ label {
   letter-spacing: 0.02em !important;
   content: "Comprar" !important;
   font-weight: 700 !important;
+  font-size: 13px !important;
+  height: 40px !important;
+  margin-top: 6px !important;
 }
 .js-item-product:hover .product-item-link::after {
   background-color: #0A281E !important;
