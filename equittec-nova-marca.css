@@ -933,7 +933,7 @@ header.js-header::before {
   line-height: 0 !important;
   overflow: hidden !important;
   background-color: transparent !important;
-  background-image: url("https://cdn.jsdelivr.net/gh/marcelmaino/equittec-nuvemshop-assets@main/assets-nuvemshop/logo-equittec-nova.png") !important;
+  background-image: url("https://cdn.jsdelivr.net/gh/marcelmaino/equittec-nuvemshop-assets@956680e/assets-nuvemshop/logo-equittec-nova.png") !important;
   background-repeat: no-repeat !important;
   background-position: left center !important;
   background-size: auto 60px !important;
@@ -1233,7 +1233,7 @@ footer#ns-section-footer [data-store="footer"] {
   overflow: hidden;
 }
 footer#ns-section-footer [data-store="footer"]::before {
-  background: #0A281E url("https://cdn.jsdelivr.net/gh/marcelmaino/equittec-nuvemshop-assets@main/assets-nuvemshop/logo-equittec-nova.png") calc(50% - 480px) center / 160px auto no-repeat !important;
+  background: #0A281E url("https://cdn.jsdelivr.net/gh/marcelmaino/equittec-nuvemshop-assets@956680e/assets-nuvemshop/logo-equittec-nova.png") calc(50% - 480px) center / 160px auto no-repeat !important;
   border-bottom: 1px solid rgba(168, 153, 104, 0.22) !important;
 }
 footer#ns-section-footer .footer-menu-title,
