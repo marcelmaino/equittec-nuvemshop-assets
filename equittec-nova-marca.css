@@ -1003,23 +1003,47 @@ header.js-header::before {
 .js-head-main .js-desktop-dropdown .nav-list-link-heading,
 .js-head-main .desktop-dropdown .header-dropdown-link,
 .js-head-main .nav-dropdown-content .nav-list-link {
-  color: #F0F5FA !important;
-  fill: #F0F5FA !important;
+  color: #FFFFFF !important;
+  fill: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
   background: transparent !important;
   display: block !important;
   width: 100% !important;
   text-align: left !important;
-  padding: 0.7rem 0.85rem !important;
+  padding: 0.75rem 0.9rem !important;
   border-radius: 12px !important;
-  font-weight: 500 !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.01em !important;
   text-transform: none !important;
+  opacity: 1 !important;
 }
 .js-head-main .desktop-dropdown .nav-list-link:hover,
 .js-head-main .desktop-dropdown .nav-list-link-heading:hover,
 .js-head-main .js-desktop-dropdown .nav-list-link:hover,
 .js-head-main .desktop-dropdown .header-dropdown-link:hover {
   color: #0A281E !important;
+  fill: #0A281E !important;
+  -webkit-text-fill-color: #0A281E !important;
   background: #A89968 !important;
+}
+
+/* Contraste geral de textos no fundo champagne */
+.heading-block,
+.section-header,
+.section-title,
+.js-item-name,
+.product-item-name,
+.price-container,
+.js-price-display,
+.breadcrumb,
+.filters-container,
+.category-controls,
+.checkbox-container,
+.filter-item,
+.radio-button-container,
+label {
+  color: #0A281E !important;
 }
 .js-head-main .desktop-dropdown .nav-list-link-icon,
 .js-head-main .desktop-dropdown svg {
