@@ -166,23 +166,6 @@ header.js-header::before {
   height: auto !important;
 }
 
-.js-head-main #logo.logo-img-container a {
-  display: block !important;
-  width: auto !important;
-  height: auto !important;
-  margin: 0 !important;
-  transform: none !important;
-  background: none !important;
-  background-image: none !important;
-  mix-blend-mode: normal !important;
-  font-size: 0 !important;
-  line-height: 0 !important;
-}
-
-.js-head-main #logo.logo-img-container img.logo-img {
-  display: none !important;
-}
-
 .js-head-main .search-form-field {
   position: relative !important;
   display: flex !important;
@@ -931,44 +914,53 @@ header.js-header::before {
   opacity: 0.85;
 }
 
-/* Logo: crop do manual p.6 — proporção do arquivo 4.985:1 */
+/*
+ * Logo horizontal do manual (conteúdo ≈5.135:1).
+ * Escala só pela ALTURA (background-size: auto Npx) — nunca estica.
+ * Largura = altura × 5.135.
+ */
 .js-head-main #logo.logo-img-container a {
-  position: relative !important;
   display: block !important;
-  height: 48px !important;
-  width: calc(48px * 4.985) !important; /* ~239px */
+  position: relative !important;
+  height: 60px !important;
+  width: 308px !important; /* 60 × 5.135 */
   max-width: 100% !important;
+  margin: 0 !important;
   padding: 0 !important;
-  background: none !important;
-  background-image: none !important;
-  overflow: visible !important;
   transform: none !important;
   mix-blend-mode: normal !important;
-  aspect-ratio: 4.985 / 1 !important;
-}
-.js-head-main #logo.logo-img-container a::after {
-  content: "" !important;
-  position: absolute !important;
-  left: 0 !important;
-  top: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  overflow: hidden !important;
+  background-color: transparent !important;
   background-image: url("https://cdn.jsdelivr.net/gh/marcelmaino/equittec-nuvemshop-assets@main/assets-nuvemshop/logo-equittec-nova.png") !important;
   background-repeat: no-repeat !important;
   background-position: left center !important;
-  background-size: contain !important;
+  background-size: auto 60px !important;
+}
+.js-head-main #logo.logo-img-container a::after {
+  content: none !important;
+  display: none !important;
 }
 .js-head-main #logo.logo-img-container img.logo-img {
-  display: none !important;
+  display: block !important;
   opacity: 0 !important;
-  width: 0 !important;
-  height: 0 !important;
+  width: 308px !important;
+  height: 60px !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  pointer-events: none !important;
 }
 
 @media (max-width: 767px) {
   .js-head-main #logo.logo-img-container a {
-    height: 36px !important;
-    width: calc(36px * 4.985) !important;
+    height: 42px !important;
+    width: 216px !important; /* 42 × 5.135 */
+    background-size: auto 42px !important;
+  }
+  .js-head-main #logo.logo-img-container img.logo-img {
+    width: 216px !important;
+    height: 42px !important;
   }
 }
 
