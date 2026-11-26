@@ -1120,7 +1120,7 @@ label {
 .js-item-product .js-item-image-container,
 .js-item-product .item-image-container,
 .js-item-product .js-product-item-image-container-private {
-  background: #F3F3F0 !important;
+  background: transparent !important;
   border-radius: 15px !important;
   margin-bottom: 12px !important;
   overflow: hidden !important;
@@ -1128,17 +1128,26 @@ label {
   border: 0 !important;
   aspect-ratio: 1 / 1 !important;
   width: 100% !important;
+  position: relative !important;
 }
 .js-item-product .product-item-image,
 .js-item-product img.product-item-image,
 .js-item-product .js-item-image,
-.js-item-product .js-product-item-image-private {
+.js-item-product .js-product-item-image-private,
+.js-item-product .product-item-image-container img,
+.js-item-product .js-product-item-image-container-private img {
   border-radius: 15px !important;
-  object-fit: contain !important;
-  padding: 10px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
   background: transparent !important;
   width: 100% !important;
   height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  position: absolute !important;
+  inset: 0 !important;
 }
 .js-item-product .product-item-information {
   border-top: 0 !important;
