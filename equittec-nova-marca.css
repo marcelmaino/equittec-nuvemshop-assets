@@ -915,52 +915,50 @@ header.js-header::before {
 }
 
 /*
- * Logo horizontal do manual (conteúdo ≈5.135:1).
- * Escala só pela ALTURA (background-size: auto Npx) — nunca estica.
- * Largura = altura × 5.135.
+ * Logo: troca o arquivo do tema via content:url na <img>.
+ * height fixa + width:auto = proporção intrínseca do PNG (sem stretch).
  */
 .js-head-main #logo.logo-img-container a {
-  display: block !important;
-  position: relative !important;
-  height: 60px !important;
-  width: 308px !important; /* 60 × 5.135 */
+  display: inline-flex !important;
+  align-items: center !important;
+  width: auto !important;
+  height: auto !important;
   max-width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
   transform: none !important;
   mix-blend-mode: normal !important;
+  background: none !important;
+  background-image: none !important;
   font-size: 0 !important;
   line-height: 0 !important;
-  overflow: hidden !important;
-  background-color: transparent !important;
-  background-image: url("https://cdn.jsdelivr.net/gh/marcelmaino/equittec-nuvemshop-assets@956680e/assets-nuvemshop/logo-equittec-nova.png") !important;
-  background-repeat: no-repeat !important;
-  background-position: left center !important;
-  background-size: auto 60px !important;
 }
+.js-head-main #logo.logo-img-container a::before,
 .js-head-main #logo.logo-img-container a::after {
   content: none !important;
   display: none !important;
+  background: none !important;
 }
 .js-head-main #logo.logo-img-container img.logo-img {
+  content: url("https://cdn.jsdelivr.net/gh/marcelmaino/equittec-nuvemshop-assets@956680e/assets-nuvemshop/logo-equittec-nova.png") !important;
   display: block !important;
-  opacity: 0 !important;
-  width: 308px !important;
+  opacity: 1 !important;
+  visibility: visible !important;
   height: 60px !important;
-  max-width: none !important;
+  width: auto !important;
+  max-width: min(308px, 100%) !important;
+  max-height: 60px !important;
   object-fit: contain !important;
-  pointer-events: none !important;
+  object-position: left center !important;
+  transform: none !important;
+  mix-blend-mode: normal !important;
 }
 
 @media (max-width: 767px) {
-  .js-head-main #logo.logo-img-container a {
-    height: 42px !important;
-    width: 216px !important; /* 42 × 5.135 */
-    background-size: auto 42px !important;
-  }
   .js-head-main #logo.logo-img-container img.logo-img {
-    width: 216px !important;
     height: 42px !important;
+    max-height: 42px !important;
+    max-width: min(216px, 100%) !important;
   }
 }
 
