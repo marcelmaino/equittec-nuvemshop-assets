@@ -162,27 +162,25 @@ header.js-header::before {
   display: flex !important;
   align-items: center !important;
   margin: 0 !important;
+  width: auto !important;
+  height: auto !important;
 }
 
 .js-head-main #logo.logo-img-container a {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 185px !important;
-  height: 52px !important;
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
   margin: 0 !important;
-  transform: translateY(-3px) !important;
-  background-image: url("https://dcdn-us.mitiendanube.com/stores/007/482/900/themes/brasilia/2-img-7571000267390175514-1776355055-0f7912bcfdd83f6f8c57f32ff106f0d11776355055-640-0.webp") !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center left !important;
-  mix-blend-mode: lighten !important;
+  transform: none !important;
+  background: none !important;
+  background-image: none !important;
+  mix-blend-mode: normal !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
 }
 
 .js-head-main #logo.logo-img-container img.logo-img {
-  opacity: 0 !important;
-  width: 185px !important;
-  height: 52px !important;
+  display: none !important;
 }
 
 .js-head-main .search-form-field {
@@ -933,22 +931,41 @@ header.js-header::before {
   opacity: 0.85;
 }
 
-/* Logo na proporção natural (900×194 ≈ 4.64:1) */
+/* Logo: arquivo novo do manual + proporção travada (≈5.13:1) */
 .js-head-main #logo.logo-img-container a {
+  position: relative !important;
+  display: block !important;
+  width: 250px !important;
+  height: 0 !important;
+  padding: 0 !important;
+  padding-top: calc(250px / 5.125) !important; /* altura pela proporção real */
+  background: none !important;
+  background-image: none !important;
+  overflow: hidden !important;
+  transform: none !important;
+  mix-blend-mode: normal !important;
+}
+.js-head-main #logo.logo-img-container a::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
   background-image: url("https://cdn.jsdelivr.net/gh/marcelmaino/equittec-nuvemshop-assets@main/assets-nuvemshop/logo-equittec-nova.png") !important;
-  background-size: contain !important;
   background-repeat: no-repeat !important;
   background-position: left center !important;
-  mix-blend-mode: normal !important;
-  width: 210px !important;
-  height: 45px !important; /* 210 / 4.64 ≈ 45 */
-  transform: none !important;
+  background-size: contain !important;
 }
 .js-head-main #logo.logo-img-container img.logo-img {
+  display: none !important;
   opacity: 0 !important;
-  width: 210px !important;
-  height: 45px !important;
-  object-fit: contain !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+@media (max-width: 767px) {
+  .js-head-main #logo.logo-img-container a {
+    width: 180px !important;
+    padding-top: calc(180px / 5.125) !important;
+  }
 }
 
 .js-head-main .header-account > a.header-icon,
